@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title">
+          <i class="glyphicon glyphicon-list-alt"></i> 注册
+        </div>
+      </div>
+      <div class="panel-body">
+        <form #registerForm="ngForm">
+          <p>
+            <input type="text" name="username" [(ngModel)]="username" class="form-control" required placeholder="用户名"/>
+          </p>
+          <p>
+            <input type="password" name="password" [(ngModel)]="password" class="form-control" required
+                   placeholder="密码"/>
+          </p>
+          <p>
+            <input type="password" name="second_password" [(ngModel)]="second_password" class="form-control" required
+                   placeholder="确认密码"/>
+          </p>
+          <p>
+            <input type="number" name="age" [(ngModel)]="age" class="form-control" required placeholder="年龄"/>
+          </p>
+          <p>
+            <select [(ngModel)]="sex" name="sex" class="form-control">
+              <option value="男">男</option>
+              <option value="女">女</option>
+            </select>
+          </p>
+          <p>
+            <select [(ngModel)]="position" name="sex" class="form-control" style="border-radius: 0">
+              <option value="中锋">中锋</option>
+              <option value="大前锋">大前锋</option>
+              <option value="小前锋">小前锋</option>
+              <option value="得分后卫">得分后卫</option>
+              <option value="控球后卫">控球后卫</option>
+            </select>
+          </p>
+          <p>
+            <button class="btn btn-primary btn-block" [disabled]="!registerForm.form.valid">注册</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<ul class="list-group" style="margin: 0">
+    <li class="list-group-item ell" *ngFor="let item of data">
+        <i  class="glyphicon glyphicon-list-alt"></i> <a routerLink="/news-list/{{item.id}}">{{item.title}}</a>
+    </li>
+</ul>

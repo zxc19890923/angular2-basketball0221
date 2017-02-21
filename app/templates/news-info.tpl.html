@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    信息展示
+                </div>
+            </div>
+            <div class="panel-body">
+                <div *ngFor="let item of data">
+                    <h4 style="text-align: center;">{{item.title}}</h4>
+                    <p class="text-right" style="color: #aaa">
+                        <span>作者: {{item.author}}</span>
+                    </p>
+                    <div innerHTML="{{item.content}}"></div>
+                    <p class="text-right" style="color: #aaa">
+                        <span>发稿时间: {{item.time}}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
